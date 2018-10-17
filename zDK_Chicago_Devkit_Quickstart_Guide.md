@@ -30,7 +30,7 @@ $ nrfjprog -r
 
 ## Building examples
 
-Please be in the top directory of the firmware folder.Compiled fimrware
+Please be in the top directory of the firmware folder.Compiled firmware
 outputs nuttx.hex and nuttx.bin are located in the /nuttx folder
 
 ## Example 1 : Blinky
