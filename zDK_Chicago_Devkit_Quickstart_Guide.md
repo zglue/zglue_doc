@@ -11,7 +11,8 @@
 2) Nordic fw download tools
 http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%2Fdita%2Ftools%2Fnrf5x_command_line_tools%2Fnrf5x_installation.html
 3) FW environment setup.Please follow steps in the zDK Linux Environment Setup guide before continue
-
+4) Serial terminal program 
+download Tera Term From https://osdn.net/projects/ttssh2/(Windows only)
 
 ## FW download
 
@@ -23,12 +24,17 @@ $ nrfjprog -f NRF52 FW_File_name.hex
 $ nrfjprog -r
 ```
 
+## Terminal settings
+![tera_term_setting](https://github.com/zglue/zglue_doc/blob/master/zmodem_option/tera_term_setting.png)
+
 
 ## Building examples
 
 Please be in the top directory of the FW folder.
 
 ## Example 1 : Blinky
+
+Description : This example blinks the LED2 of the zglue smartfabric
 
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
@@ -41,6 +47,8 @@ Current folder nuttx.hex and nuttx.bin.
 
 ## Example 2 : hello
 
+Description : This example prints "Hello world" on the UART terminal
+
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
 $make hello
@@ -50,8 +58,10 @@ $cd ..
 
 Current folder contains nuttx.hex and nuttx.bin.
 
-## Example 3 : nsh with nimble(ble example). Nuttx runs a terminal shell through which you can
-launch other applications
+## Example 3 : nsh with nimble(ble example).
+
+Description : This example runs Nuttx shell(nsh) from which you can 
+launch other applications including a ble example
 
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
