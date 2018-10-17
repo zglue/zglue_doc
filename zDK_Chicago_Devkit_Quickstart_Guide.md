@@ -17,9 +17,11 @@ http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%
 
 Follow the installation and setup from step 2 in software requirements. Following are commands to download FW
 
-$nrfjprog -e
-$nrfjprog -f NRF52 FW_File_name.hex
-$nrfjprog -r
+```shell
+$ nrfjprog -e
+$ nrfjprog -f NRF52 FW_File_name.hex
+$ nrfjprog -r
+```
 
 
 ## Building examples
@@ -33,7 +35,7 @@ $cd nuttx/configs/zglue_zeus2_chicago
 $make blinky
 $cd ..
 $cd ..
-```shell
+```
 
 Current folder nuttx.hex and nuttx.bin.
 
@@ -44,7 +46,7 @@ $cd nuttx/configs/zglue_zeus2_chicago
 $make hello
 $cd ..
 $cd ..
-```shell
+```
 
 Current folder contains nuttx.hex and nuttx.bin.
 
@@ -56,7 +58,7 @@ $cd nuttx/configs/zglue_zeus2_chicago
 $make dev_kit
 $cd ..
 $cd ..
-```shell
+```
 
 For UART settings, use the same settings in the document Z-modem-Transfer-File-between-dev-board-and-PC
 
