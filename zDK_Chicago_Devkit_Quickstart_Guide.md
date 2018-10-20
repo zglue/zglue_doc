@@ -109,13 +109,13 @@ nsh>
           cp          exit        mkdir       pwd         true
           cmp         false       mkfatfs     rm          uname
 
-Builtin Apps:
-  bmm150
-  bq25120
-  fast
-  i2c
-  lsm6ds3
-  sensor
+        Builtin Apps:
+          bmm150
+          bq25120
+          fast
+          i2c
+          lsm6ds3
+          sensor
 
 2) Running the  zGlue smartfabric
 
@@ -148,62 +148,62 @@ Builtin Apps:
  
 3) Running the BQ25120 TI pmic app
   
-nsh> bq25120
-Battery status : FAULT
-Battery health : UNDERVOLTAGE
-Current BQ vout setting : 1800mV
+        nsh> bq25120
+        Battery status : FAULT
+        Battery health : UNDERVOLTAGE
+        Current BQ vout setting : 1800mV
 
 4) Running the MC3672 mcube accelerometer
 
-nsh> sensor
-Type 'sensor 1' for mc3672 sensor
-Type 'sensor 2' for max86140 sensor
-nsh> sensor 1
-Starting to Read /dev/accel0 device
-Can't Open Device for Read. Reason:-1
-Starting to Read /dev/accel1 device
-        Param: mode:1, range:1, resolution:3, samplerate:6
-
-Starting to Write MC3672 Parameter:
-
-        resolution:3, samplerate:6
-        Param: mode:1, range:1, resolution:3, samplerate:6
-
-
-mc3672 raw data :
-Data index : 0  , X : 1, Y: 0, Z: 122
-Data index : 1  , X : 2, Y: 0, Z: 122
-Data index : 2  , X : 2, Y: -1, Z: 123
-Data index : 3  , X : 2, Y: -1, Z: 124
-Data index : 4  , X : 1, Y: 0, Z: 123
-Data index : 5  , X : 1, Y: -1, Z: 123
-Data index : 6  , X : 2, Y: 0, Z: 124
-Data index : 7  , X : 2, Y: -1, Z: 123
-Data index : 8  , X : 1, Y: 0, Z: 124
-Data index : 9  , X : 2, Y: 0, Z: 123
-Data index : 10  , X : 2, Y: 0, Z: 123
-Data index : 11  , X : 2, Y: 0, Z: 123
-Data index : 12  , X : 2, Y: -1, Z: 124
-Data index : 13  , X : 3, Y: -2, Z: 123
-Data index : 14  , X : 1, Y: -1, Z: 123
-Data index : 15  , X : 3, Y: -1, Z: 123
-
-mc3672 raw data :
-Data index : 0  , X : 2, Y: 0, Z: 124
-Data index : 1  , X : 2, Y: 0, Z: 124
-Data index : 2  , X : 1, Y: 0, Z: 124
-Data index : 3  , X : 2, Y: 0, Z: 123
-Data index : 4  , X : 2, Y: 0, Z: 123
-Data index : 5  , X : 2, Y: 0, Z: 122
-Data index : 6  , X : 3, Y: 0, Z: 123
-Data index : 7  , X : 2, Y: -1, Z: 122
-Data index : 8  , X : 3, Y: 0, Z: 123
-Data index : 9  , X : 3, Y: -1, Z: 123
-Data index : 10  , X : 1, Y: -1, Z: 125
-Data index : 11  , X : 2, Y: 0, Z: 123
-Data index : 12  , X : 2, Y: -1, Z: 122
-Data index : 13  , X : 2, Y: -1, Z: 123
-Data index : 14  , X : 2, Y: 0, Z: 124
-Data index : 15  , X : 1, Y: -1, Z: 123
-End
-nsh>
+        nsh> sensor
+        Type 'sensor 1' for mc3672 sensor
+        Type 'sensor 2' for max86140 sensor
+        nsh> sensor 1
+        Starting to Read /dev/accel0 device
+        Can't Open Device for Read. Reason:-1
+        Starting to Read /dev/accel1 device
+                Param: mode:1, range:1, resolution:3, samplerate:6
+        
+        Starting to Write MC3672 Parameter:
+        
+                resolution:3, samplerate:6
+                Param: mode:1, range:1, resolution:3, samplerate:6
+        
+        
+        mc3672 raw data :
+        Data index : 0  , X : 1, Y: 0, Z: 122
+        Data index : 1  , X : 2, Y: 0, Z: 122
+        Data index : 2  , X : 2, Y: -1, Z: 123
+        Data index : 3  , X : 2, Y: -1, Z: 124
+        Data index : 4  , X : 1, Y: 0, Z: 123
+        Data index : 5  , X : 1, Y: -1, Z: 123
+        Data index : 6  , X : 2, Y: 0, Z: 124
+        Data index : 7  , X : 2, Y: -1, Z: 123
+        Data index : 8  , X : 1, Y: 0, Z: 124
+        Data index : 9  , X : 2, Y: 0, Z: 123
+        Data index : 10  , X : 2, Y: 0, Z: 123
+        Data index : 11  , X : 2, Y: 0, Z: 123
+        Data index : 12  , X : 2, Y: -1, Z: 124
+        Data index : 13  , X : 3, Y: -2, Z: 123
+        Data index : 14  , X : 1, Y: -1, Z: 123
+        Data index : 15  , X : 3, Y: -1, Z: 123
+        
+        mc3672 raw data :
+        Data index : 0  , X : 2, Y: 0, Z: 124
+        Data index : 1  , X : 2, Y: 0, Z: 124
+        Data index : 2  , X : 1, Y: 0, Z: 124
+        Data index : 3  , X : 2, Y: 0, Z: 123
+        Data index : 4  , X : 2, Y: 0, Z: 123
+        Data index : 5  , X : 2, Y: 0, Z: 122
+        Data index : 6  , X : 3, Y: 0, Z: 123
+        Data index : 7  , X : 2, Y: -1, Z: 122
+        Data index : 8  , X : 3, Y: 0, Z: 123
+        Data index : 9  , X : 3, Y: -1, Z: 123
+        Data index : 10  , X : 1, Y: -1, Z: 125
+        Data index : 11  , X : 2, Y: 0, Z: 123
+        Data index : 12  , X : 2, Y: -1, Z: 122
+        Data index : 13  , X : 2, Y: -1, Z: 123
+        Data index : 14  , X : 2, Y: 0, Z: 124
+        Data index : 15  , X : 1, Y: -1, Z: 123
+        End
+        nsh>
