@@ -95,9 +95,9 @@ $cd ..
 ```
 Open the terminal and hit the return key. The nsh shell is now available
 
-nsh>
 1) nsh help
 
+        nsh>
         nsh> ?
         help usage:  help [-v] [<cmd>]
 
@@ -117,7 +117,7 @@ nsh>
           lsm6ds3
           sensor
 
-2) Running the  zGlue smartfabric
+2) Running the  zGlue smartfabric app
 
         nsh>
         nsh> fast
@@ -135,10 +135,6 @@ nsh>
           id: Return the FAST chip id
           program: Program registers/peripherals
           realign: Run realignment
-          clear: FAST clears tiles/peripherals
-          read: FAST read single reg/tile/peripheral
-          write: FAST write single reg/tile/peripheral
-          scan: FAST scan regs/tiles/peripherals
           pmic: Control PMIC
           gpio: Control GPIO expander
           led: Control LED sinks
@@ -153,7 +149,7 @@ nsh>
         Battery health : UNDERVOLTAGE
         Current BQ vout setting : 1800mV
 
-4) Running the MC3672 mcube accelerometer
+4) Running the MC3672 mcube accelerometer app
 
         nsh> sensor
         Type 'sensor 1' for mc3672 sensor
