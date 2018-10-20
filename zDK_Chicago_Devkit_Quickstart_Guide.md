@@ -98,16 +98,16 @@ Open the terminal and hit the return key. The nsh shell is now available
 nsh>
 1) nsh help
 
-nsh> ?
-help usage:  help [-v] [<cmd>]
+        nsh> ?
+        help usage:  help [-v] [<cmd>]
 
-  ?           dirname     help        mkrd        rmdir       umount
-  basename    date        hexdump     mh          set         unset
-  break       dd          kill        mount       sh          usleep
-  cat         echo        ls          mv          sleep       xd
-  cd          exec        mb          mw          time
-  cp          exit        mkdir       pwd         true
-  cmp         false       mkfatfs     rm          uname
+          ?           dirname     help        mkrd        rmdir       umount
+          basename    date        hexdump     mh          set         unset
+          break       dd          kill        mount       sh          usleep
+          cat         echo        ls          mv          sleep       xd
+          cd          exec        mb          mw          time
+          cp          exit        mkdir       pwd         true
+          cmp         false       mkfatfs     rm          uname
 
 Builtin Apps:
   bmm150
@@ -119,32 +119,32 @@ Builtin Apps:
 
 2) Running the  zGlue smartfabric
 
-nsh>
-nsh> fast
-Usage: fast <cmd> [arguments]
-Where <cmd> is one of:
+        nsh>
+        nsh> fast
+        Usage: fast <cmd> [arguments]
+        Where <cmd> is one of:
 
-  help: Help for nsh fast commands
-  debug: Enable/Disable debug features.
-  init: Initialize the fast api
-  config: Erase/Update the zglue FW config file
-  system: Return system/chiplets information
-  connect: Connect chips/peripherals to FAST
-  disconnect: Disconnect chips/peripherals from FAST
-  power: Set/get power state
-  id: Return the FAST chip id
-  program: Program registers/peripherals
-  realign: Run realignment
-  clear: FAST clears tiles/peripherals
-  read: FAST read single reg/tile/peripheral
-  write: FAST write single reg/tile/peripheral
-  scan: FAST scan regs/tiles/peripherals
-  pmic: Control PMIC
-  gpio: Control GPIO expander
-  led: Control LED sinks
-  interface: Control the FAST interface settings for SPI/I2C/JTAG
-  close: Close the fast api
-nsh>
+          help: Help for nsh fast commands
+          debug: Enable/Disable debug features.
+          init: Initialize the fast api
+          config: Erase/Update the zglue FW config file
+          system: Return system/chiplets information
+          connect: Connect chips/peripherals to FAST
+          disconnect: Disconnect chips/peripherals from FAST
+          power: Set/get power state
+          id: Return the FAST chip id
+          program: Program registers/peripherals
+          realign: Run realignment
+          clear: FAST clears tiles/peripherals
+          read: FAST read single reg/tile/peripheral
+          write: FAST write single reg/tile/peripheral
+          scan: FAST scan regs/tiles/peripherals
+          pmic: Control PMIC
+          gpio: Control GPIO expander
+          led: Control LED sinks
+          interface: Control the FAST interface settings for SPI/I2C/JTAG
+          close: Close the fast api
+        nsh>
  
 3) Running the BQ25120 TI pmic app
   
