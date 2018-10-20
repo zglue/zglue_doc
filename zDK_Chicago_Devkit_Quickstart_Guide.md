@@ -4,6 +4,7 @@
 
 1) Chicago dev kit connected to PC through USB
 2) Segger JTAG connected to 20 pin JTAG header and PC
+3) FTDI breakout board (https://www.sparkfun.com/products/9873)
 
 ## Software requirements
 
@@ -24,7 +25,13 @@ $ nrfjprog -f NRF52 FW_File_name.hex
 $ nrfjprog -r
 ```
 
-## Terminal settings
+## Terminal setup and settings
+
+1) Connect pin UART_RX from the devkit to TXD pin of the FTDI breakout board
+2) Connect ping UART_TX from the devkit to the RXD pin of the FTDI breakout board
+
+Set up the terminal program with the following settings
+
 ![tera_term_setting](https://github.com/zglue/zglue_doc/blob/master/zmodem_option/tera_term_setting.png)
 
 
@@ -55,23 +62,148 @@ $cd ..
 $cd ..
 ```
 
-## Example 3 : nsh with nimble(ble peripheral example).
+## Example 3 :nimble(ble uart example)
 
-Description : This example runs Nuttx shell(nsh) from which you can 
-launch other applications. Application include
-1) BLE peripheral example
-2) zGlue smartfabric configuration
-3) BQ25120a PMIC
-4) MC3672 mcube accelerometer
-5) BMM150 Bosch magnetometer
-6) TMP108 TI temperature sensor
+Description : This example uses the BLE with nimble stack and
+shows the ble uart profile. The BLE device name is 'Z_nimble_uart'
+Data sent on terminal will be shown in BLE and vice versa
 
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
-$make dev_kit
+$make nimble_uart
 $cd ..
 $cd ..
 ```
 
+## Example 4 : nsh with sensor applications
+
+Description : This example runs Nuttx shell(nsh) from which you can 
+launch other applications. Application include
+
+1) zGlue smartfabric
+2) MC3672 mcube accelerometer
+3) MAX86120 maxim optical hr chip 
+4) BMM150 Bosch magnetometer
+5) TMP108 TI temperature sensor
+6) BQ25120 TI pmic
+
+```shell
+$cd nuttx/configs/zglue_zeus2_chicago
+$make nsh
+$cd ..
+$cd ..
+```
+Open the terminal and hit the return key. The nsh shell is now available
+
+nsh>
+1) nsh help
+
+nsh> ?
+help usage:  help [-v] [<cmd>]
+
+  ?           dirname     help        mkrd        rmdir       umount
+  basename    date        hexdump     mh          set         unset
+  break       dd          kill        mount       sh          usleep
+  cat         echo        ls          mv          sleep       xd
+  cd          exec        mb          mw          time
+  cp          exit        mkdir       pwd         true
+  cmp         false       mkfatfs     rm          uname
+
+Builtin Apps:
+  bmm150
+  bq25120
+  fast
+  i2c
+  lsm6ds3
+  sensor
+
+2) Running the  zGlue smartfabric
+
+nsh>
+nsh> fast
+Usage: fast <cmd> [arguments]
+Where <cmd> is one of:
+
+  help: Help for nsh fast commands
+  debug: Enable/Disable debug features.
+  init: Initialize the fast api
+  config: Erase/Update the zglue FW config file
+  system: Return system/chiplets information
+  connect: Connect chips/peripherals to FAST
+  disconnect: Disconnect chips/peripherals from FAST
+  power: Set/get power state
+  id: Return the FAST chip id
+  program: Program registers/peripherals
+  realign: Run realignment
+  clear: FAST clears tiles/peripherals
+  read: FAST read single reg/tile/peripheral
+  write: FAST write single reg/tile/peripheral
+  scan: FAST scan regs/tiles/peripherals
+  pmic: Control PMIC
+  gpio: Control GPIO expander
+  led: Control LED sinks
+  interface: Control the FAST interface settings for SPI/I2C/JTAG
+  close: Close the fast api
+nsh>
+ 
+3) Running the BQ25120 TI pmic app
+  
+nsh> bq25120
+Battery status : FAULT
+Battery health : UNDERVOLTAGE
+Current BQ vout setting : 1800mV
+
+4) Running the MC3672 mcube accelerometer
+
+nsh> sensor
+Type 'sensor 1' for mc3672 sensor
+Type 'sensor 2' for max86140 sensor
+nsh> sensor 1
+Starting to Read /dev/accel0 device
+Can't Open Device for Read. Reason:-1
+Starting to Read /dev/accel1 device
+        Param: mode:1, range:1, resolution:3, samplerate:6
+
+Starting to Write MC3672 Parameter:
+
+        resolution:3, samplerate:6
+        Param: mode:1, range:1, resolution:3, samplerate:6
 
 
+mc3672 raw data :
+Data index : 0  , X : 1, Y: 0, Z: 122
+Data index : 1  , X : 2, Y: 0, Z: 122
+Data index : 2  , X : 2, Y: -1, Z: 123
+Data index : 3  , X : 2, Y: -1, Z: 124
+Data index : 4  , X : 1, Y: 0, Z: 123
+Data index : 5  , X : 1, Y: -1, Z: 123
+Data index : 6  , X : 2, Y: 0, Z: 124
+Data index : 7  , X : 2, Y: -1, Z: 123
+Data index : 8  , X : 1, Y: 0, Z: 124
+Data index : 9  , X : 2, Y: 0, Z: 123
+Data index : 10  , X : 2, Y: 0, Z: 123
+Data index : 11  , X : 2, Y: 0, Z: 123
+Data index : 12  , X : 2, Y: -1, Z: 124
+Data index : 13  , X : 3, Y: -2, Z: 123
+Data index : 14  , X : 1, Y: -1, Z: 123
+Data index : 15  , X : 3, Y: -1, Z: 123
+
+mc3672 raw data :
+Data index : 0  , X : 2, Y: 0, Z: 124
+Data index : 1  , X : 2, Y: 0, Z: 124
+Data index : 2  , X : 1, Y: 0, Z: 124
+Data index : 3  , X : 2, Y: 0, Z: 123
+Data index : 4  , X : 2, Y: 0, Z: 123
+Data index : 5  , X : 2, Y: 0, Z: 122
+Data index : 6  , X : 3, Y: 0, Z: 123
+Data index : 7  , X : 2, Y: -1, Z: 122
+Data index : 8  , X : 3, Y: 0, Z: 123
+Data index : 9  , X : 3, Y: -1, Z: 123
+Data index : 10  , X : 1, Y: -1, Z: 125
+Data index : 11  , X : 2, Y: 0, Z: 123
+Data index : 12  , X : 2, Y: -1, Z: 122
+Data index : 13  , X : 2, Y: -1, Z: 123
+Data index : 14  , X : 2, Y: 0, Z: 124
+Data index : 15  , X : 1, Y: -1, Z: 123
+End
+nsh>
