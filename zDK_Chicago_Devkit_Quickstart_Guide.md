@@ -57,7 +57,14 @@ $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/blinky
 $make
 ```
-The example files are in apps/examples/blinky_zglue/
+The example files are in apps/examples/blinky_zglue/  
+
+Burn image on nRF52832 (ZiP) through JTAG programmer.
+```shell
+$ nrfjprog -e
+$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -r
+```
 
 ## Example 2 : hello world
 
@@ -76,7 +83,14 @@ $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/hello
 $make
 ```
-The example files are in apps/examples/hello/
+The example files are in apps/examples/hello/  
+  
+Burn image on nRF52832 (ZiP) through JTAG programmer.
+```shell
+$ nrfjprog -e
+$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -r
+```
 
 ## Example 3 :nimble(ble uart example)
 
@@ -97,7 +111,14 @@ $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nimble_uart
 $make
 ```
-The example files are in apps/examples/ble_app_uart/
+The example files are in apps/examples/ble_app_uart/  
+  
+Burn image on nRF52832 (ZiP) through JTAG programmer.
+```shell
+$ nrfjprog -e
+$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -r
+```
 
 ## Example 4 : nsh with sensor applications
 
@@ -125,7 +146,14 @@ $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nsh
 $make
 ```
-The example files are in apps/examples/nsh/
+The example files are in apps/examples/nsh/  
+  
+Burn image on nRF52832 (ZiP) through JTAG programmer.
+```shell
+$ nrfjprog -e
+$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -r
+```
 
 Open the terminal and hit the return key. The nsh shell is now available
 
