@@ -43,13 +43,21 @@ outputs nuttx.hex and nuttx.bin are located in the /nuttx folder
 ## Example 1 : Blinky
 
 Description : This example blinks the LED2 of the zglue smartfabric
-
+If you are running on Linux:
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
 $make blinky
 $cd ..
 $cd ..
 ```
+elseif you are running on MacOS
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/blinky
+$make
+```
+
 
 ## Example 2 : hello world
 
