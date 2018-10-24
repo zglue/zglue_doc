@@ -57,31 +57,47 @@ $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/blinky
 $make
 ```
-
+The example files are in apps/examples/blinky_zglue/
 
 ## Example 2 : hello world
 
 Description : This example prints "Hello world" on the UART terminal
-
+If you are running on Linux:
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
 $make hello
 $cd ..
 $cd ..
 ```
+elseif you are running on MacOS
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/hello
+$make
+```
+The example files are in apps/examples/hello/
 
 ## Example 3 :nimble(ble uart example)
 
 Description : This example uses the BLE with nimble stack and
 shows the ble uart profile. The BLE device name is 'Z_nimble_uart'
 Data sent on terminal will be shown in BLE and vice versa
-
+If you are running on Linux
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
 $make nimble_uart
 $cd ..
 $cd ..
 ```
+elseif you are running on MacOS
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nimble_uart
+$make
+```
+The example files are in apps/examples/ble_app_uart/
 
 ## Example 4 : nsh with sensor applications
 
@@ -94,13 +110,22 @@ launch other applications. Application include
 4) BMM150 Bosch magnetometer
 5) TMP108 TI temperature sensor
 6) BQ25120 TI pmic
-
+if you are running on Linux
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
 $make nsh
 $cd ..
 $cd ..
 ```
+elseif you are running on MacOS
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nsh
+$make
+```
+The example files are in apps/examples/nsh/
+
 Open the terminal and hit the return key. The nsh shell is now available
 
 1) nsh help
