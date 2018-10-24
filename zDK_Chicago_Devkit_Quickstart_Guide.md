@@ -42,7 +42,7 @@ outputs nuttx.hex and nuttx.bin are located in the /nuttx folder
 
 ## Example 1 : Blinky
 
-Description : This example blinks the LED2 of the zglue smartfabric
+Description : This example blinks the LED2 of the zglue smartfabric.  
 If you are running on Linux:
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
@@ -61,7 +61,7 @@ The example files are in apps/examples/blinky_zglue/
 
 ## Example 2 : hello world
 
-Description : This example prints "Hello world" on the UART terminal
+Description : This example prints "Hello world" on the UART terminal.  
 If you are running on Linux:
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
@@ -82,7 +82,7 @@ The example files are in apps/examples/hello/
 
 Description : This example uses the BLE with nimble stack and
 shows the ble uart profile. The BLE device name is 'Z_nimble_uart'
-Data sent on terminal will be shown in BLE and vice versa
+Data sent on terminal will be shown in BLE and vice versa.  
 If you are running on Linux
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
@@ -110,6 +110,7 @@ launch other applications. Application include
 4) BMM150 Bosch magnetometer
 5) TMP108 TI temperature sensor
 6) BQ25120 TI pmic
+  
 if you are running on Linux
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
