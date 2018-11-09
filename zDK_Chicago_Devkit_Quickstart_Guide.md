@@ -67,6 +67,7 @@ $ nrfjprog -r
 ```
 
 ## Example 2 : hello world
+For every example below, you will need to connect the UART_TX_QFN and UART_RX_QFN pin to a FTDI break out board RX and TX pin respestively.  Please note the UART_TX_QFN/UART_RX_QFN is 1.8V signal.  You will need to configure your FTDI output to 1.8V.  Otherwise, you will need a level shifter to connect between FTDI and breakout board.
 
 Description : This example prints "Hello world" on the UART terminal.  
 If you are running on Linux:
