@@ -21,7 +21,7 @@ Follow the installation and setup from step 2 in software requirements. Followin
 
 ```shell
 $ nrfjprog -e
-$ nrfjprog -f NRF52 FW_File_name.hex
+$ nrfjprog -f NRF52 --program FW_File_name.hex
 $ nrfjprog -r
 ```
 
