@@ -62,7 +62,7 @@ The example files are in apps/examples/blinky_zglue/
 Burn image on nRF52832 (ZiP) through JTAG programmer.
 ```shell
 $ nrfjprog -e
-$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -f NRF52 --program nuttx.hex
 $ nrfjprog -r
 ```
 
@@ -89,7 +89,7 @@ The example files are in apps/examples/hello/
 Burn image on nRF52832 (ZiP) through JTAG programmer.
 ```shell
 $ nrfjprog -e
-$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -f NRF52 --program nuttx.hex
 $ nrfjprog -r
 ```
 
@@ -117,7 +117,7 @@ The example files are in apps/examples/ble_app_uart/
 Burn image on nRF52832 (ZiP) through JTAG programmer.
 ```shell
 $ nrfjprog -e
-$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -f NRF52 --program nuttx.hex
 $ nrfjprog -r
 ```
 
@@ -152,7 +152,7 @@ The example files are in apps/examples/nsh/
 Burn image on nRF52832 (ZiP) through JTAG programmer.
 ```shell
 $ nrfjprog -e
-$ nrfjprog -f NRF52 nuttx.hex
+$ nrfjprog -f NRF52 --program nuttx.hex
 $ nrfjprog -r
 ```
 
