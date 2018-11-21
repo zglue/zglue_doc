@@ -100,9 +100,13 @@ $ sudo ldconfig
 
 Please install vmware-player firstly , you can download VMware-player-14.1.1-7528167.exe
 
-And download  the pre-install virtual machine from Zglue ftp server.
+And download  the pre-install virtual machine (zglue_sdk_virtual_machine_x64_20180813.zip) 
 
-```sh
-$ unzip zglue_sdk_virtual_machine_x64_20180813.zip
-```
+from Zglue ftp server.  Unzip it to your window location.
+
+The default account:             **zglue_sdk**
+
+default account password:  **123456** 
+
+
 
