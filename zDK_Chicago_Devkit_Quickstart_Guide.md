@@ -57,6 +57,13 @@ $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/blinky
 $make
 ```
+elseif you are running on windows10
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/blinky
+$make
+```
 The example files are in apps/examples/blinky_zglue/  
 
 Burn image on nRF52832 (ZiP) through JTAG programmer.
@@ -82,6 +89,13 @@ elseif you are running on MacOS
 $cd nuttx
 $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/hello
+$make
+```
+elseif you are running on windows10
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/hello
 $make
 ```
 The example files are in apps/examples/hello/  
@@ -110,6 +124,13 @@ elseif you are running on MacOS
 $cd nuttx
 $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nimble_uart
+$make
+```
+elseif you are running on windows10
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/nimble_uart
 $make
 ```
 The example files are in apps/examples/ble_app_uart/  
@@ -145,6 +166,13 @@ elseif you are running on MacOS
 $cd nuttx
 $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nsh
+$make
+```
+elseif you are running on MacOS
+```shell
+$cd nuttx
+$make distclean
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/nsh
 $make
 ```
 The example files are in apps/examples/nsh/  
