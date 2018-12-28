@@ -99,7 +99,7 @@ $./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/hello
 $make
 ```
 The example files are in apps/examples/hello/  
-  
+
 Burn image on nRF52832 (ZiP) through JTAG programmer.
 ```shell
 $ nrfjprog -e
@@ -134,7 +134,7 @@ $./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/nimble_uart
 $make
 ```
 The example files are in apps/examples/ble_app_uart/  
-  
+
 Burn image on nRF52832 (ZiP) through JTAG programmer.
 ```shell
 $ nrfjprog -e
@@ -148,12 +148,16 @@ Description : This example runs Nuttx shell(nsh) from which you can
 launch other applications. Application include
 
 1) zGlue smartfabric
+
 2) MC3672 mcube accelerometer
-3) MAX86120 maxim optical hr chip 
+
+3) MAX86140 maxim optical hr chip
+
 4) BMM150 Bosch magnetometer
+
 5) TMP108 TI temperature sensor
 6) BQ25120 TI pmic
-  
+
 if you are running on Linux
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago
@@ -176,7 +180,7 @@ $./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/nsh
 $make
 ```
 The example files are in apps/examples/nsh/  
-  
+
 Burn image on nRF52832 (ZiP) through JTAG programmer.
 ```shell
 $ nrfjprog -e
@@ -191,7 +195,7 @@ Open the terminal and hit the return key. The nsh shell is now available
         nsh>
         nsh> ?
         help usage:  help [-v] [<cmd>]
-
+    
           ?           dirname     help        mkrd        rmdir       umount
           basename    date        hexdump     mh          set         unset
           break       dd          kill        mount       sh          usleep
@@ -199,7 +203,7 @@ Open the terminal and hit the return key. The nsh shell is now available
           cd          exec        mb          mw          time
           cp          exit        mkdir       pwd         true
           cmp         false       mkfatfs     rm          uname
-
+    
         Builtin Apps:
           bmm150
           bq25120
@@ -214,7 +218,7 @@ Open the terminal and hit the return key. The nsh shell is now available
         nsh> fast
         Usage: fast <cmd> [arguments]
         Where <cmd> is one of:
-
+    
           help: Help for nsh fast commands
           debug: Enable/Disable debug features.
           init: Initialize the fast api
@@ -232,9 +236,9 @@ Open the terminal and hit the return key. The nsh shell is now available
           interface: Control the FAST interface settings for SPI/I2C/JTAG
           close: Close the fast api
         nsh>
- 
+
 3) Running the BQ25120 TI pmic app
-  
+
         nsh> bq25120
         Battery status : FAULT
         Battery health : UNDERVOLTAGE
@@ -255,8 +259,6 @@ Open the terminal and hit the return key. The nsh shell is now available
         
                 resolution:3, samplerate:6
                 Param: mode:1, range:1, resolution:3, samplerate:6
-        
-        
         mc3672 raw data :
         Data index : 0  , X : 1, Y: 0, Z: 122
         Data index : 1  , X : 2, Y: 0, Z: 122
@@ -294,3 +296,32 @@ Open the terminal and hit the return key. The nsh shell is now available
         Data index : 15  , X : 1, Y: -1, Z: 123
         End
         nsh>
+
+5) Read the MAX86140 sensor raw data
+
+```shell
+nsh> sensor 2
+Starting to Read /dev/heartrate0 device
+chip id = 24
+IRSample:       0x346
+Red Sample:     0x4
+Green Sample:   0x6
+IRSample:       0x33c
+Red Sample:     0x0
+Green Sample:   0x5
+IRSample:       0x339
+Red Sample:     0x6
+Green Sample:   0x4
+IRSample:       0x33c
+Red Sample:     0x3d
+Green Sample:   0x0
+IRSample:       0x33e
+Red Sample:     0x9
+Green Sample:   0x1
+IRSample:       0x33e
+Red Sample:     0x7
+Green Sample:   0x4
+IRSample:       0x33e
+Red Sample:     0xf
+```
+
