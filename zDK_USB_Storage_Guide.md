@@ -25,29 +25,29 @@ $ nrfjprog -e; nrfjprog --program nuttx.hex
 
 Comment:
 
-1. the usb drive is only worked over Rev_C or later (pca10056  does NOT work).
+1. the usb driver is only worked over  52840 Rev_C or later (pca10056  does NOT work, , it's Rev_A).
 
 2. Due to hardware issue,  every time , you should power cycle zDevKit if there is issue for  connecting 
 
    issue between Host and zDevKit
 
-3. the first time , you should erase all internal flash before connecting usb msc to host(this will make 
+3. the first time , you should erase MX25R QSPI flash before connecting usb msc to host(this will make
 
-   sure the internal flash is  empty)
+   sure the QSPI flash is  empty)
 
 
 
 ## USB Storage Usage
 
-After flashing image into Dev board
+After programming image into Dev board
 
-1. connect zDevKit with Host by USB cable
+1. connect zDevKit (USB port Not  Serial debug port)with Host by USB cable
 
 ```sh
 nsh>flash_eraseall /dev/mtdblock3
 ```
 
-       This command should be run once.  It can make sure the internal flash content is empty
+       This command should be run once.  It can make sure the QSPI flash content is empty
 
 
 
@@ -79,9 +79,9 @@ Comment:
 
 
 
-3. Now you can copy a file into this new disk for te4st
+3. Now you can copy a file into this new disk for test
 
-4. mount the internal flash from zDevKit and lookup the new file from zDevKit
+4. mount the MX25R QSPI flash from zDevKit and lookup the new file from zDevKit
 
    ```sh
    nsh> mount -t vfat /dev/mtdblock3 /mx25r
