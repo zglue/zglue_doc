@@ -102,7 +102,7 @@ sign_img.sh Usage:
 
 ## Application Upgrade Process
 
-1. build two image with different version, one is located in *0x20000*, another is programed on *0x60000* ,   
+1. build two images with different version, one is located in *0x20000*, another is programed on *0x60000* ,   
 
    assume the max of image length is *0x40000* . 
 
