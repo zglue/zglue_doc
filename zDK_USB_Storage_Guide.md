@@ -2,12 +2,12 @@
 
 ## Summary
 
-zDK usb storage is based on 8MB MX25R QSPI flash( 4kB block size). Now the feature included:
+zDK usb storage is based on 8MB MX25R QSPI flash( 4kB block size). Now the feature includes:
 
-1. internal FAT filesystem;
-2. created filesystem by Host;
+1. internal zDK FAT filesystem;
+2.  filesystem created by Host such as a PC;
 
-This feature can be used as context exchange between Host and zDevKit.
+Feature 2 can be used as content exchange between Host and devices running on zGlue SDK.
 
 
 
@@ -28,13 +28,11 @@ $ nrfjprog -e; nrfjprog --program nuttx.hex
 
 Comment:
 
-1. the usb driver is only worked over  52840 Rev_C or later (pca10056  does NOT work, , it's Rev_A).
+1. the usb driver only work with 52840 Rev_C silicon or later (pca10056  does NOT work, , it's Rev_A).
 
-2. Due to hardware issue,  every time , you should power cycle zDevKit if there is issue for  connecting 
+2. Due to a hardware bug, you need to power cycle zGlue DevKit if there is issue to  connect DevKit to host.
 
-   issue between Host and zDevKit
-
-3. the first time , you should erase MX25R QSPI flash before connecting usb msc to host(this will make
+3. For the first time use, you should erase MX25R QSPI flash before connecting USB MSC to host(this will make
 
    sure the QSPI flash is  empty)
 
@@ -44,7 +42,7 @@ Comment:
 
 After programming image into Dev board
 
-1. connect zDevKit (USB port Not  Serial debug port)with Host by USB cable
+1. connect zGlue DevKit (maue sure you connected USB port Not Serial debug port) to Host using USB cable
 
 ```sh
 nsh>flash_eraseall /dev/mtdblock3
@@ -54,7 +52,7 @@ nsh>flash_eraseall /dev/mtdblock3
 
 
 
-2. enable usb msc connection 
+2. enable USB MSC connection 
 
 ```shell
 nsh> msconn
@@ -74,11 +72,11 @@ usbmsc_scsi_main: Running
 
 Comment: 
 
-​    1)   If you get "Running" log from console , it indicates that the usb msc has been recongnized by host and
+​    1)   If you get "Running" log from console , it indicates that the USB MSC has been recongnized by host and
 
-​           you will get new disk for Window explorer (Window-10).
+​           you will get a new disk on Window explorer (Window-10).
 
-​    2)   If this is your first time , you should format the new disk with block size(4096).
+​    2)   If this is your first time running, you should format the new disk with block size(4096).
 
 
 
