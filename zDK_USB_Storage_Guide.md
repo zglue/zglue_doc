@@ -16,8 +16,11 @@ This feature can be used as context exchange between Host and zDevKit.
 1. Build USB MSC image
 
 ```shell
-$ cd configs/nrf52840_dk
-$ make distclean; make nsh_msc 
+$ cd nuttx
+$ make distclean
+$ ./tools/configure.sh -l -a ../apps nrf52840_dk/nsh_msc
+# if you are on macOS, you should use "-m" option instead of "-l"
+
 # Finally, this will generate nuttx, nuttx.bin,nuttx.hex.
 $ nrfjprog -e; nrfjprog --program nuttx.hex 
 # this will program usb msc image into internal flash
@@ -47,7 +50,7 @@ After programming image into Dev board
 nsh>flash_eraseall /dev/mtdblock3
 ```
 
-       This command should be run once.  It can make sure the QSPI flash content is empty
+       This command should be run once.  It can make sure the QSPI flash content is empty
 
 
 
