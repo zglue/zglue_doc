@@ -29,11 +29,11 @@ $ nrfjprog -e; nrfjprog --program nuttx.hex
 ```
 
 2. Comment:
-   1. the *CONFIG_MCUBOOT_APP_IMAGE_OFFSET* of bootloader config should be equal with   
+   1. the *CONFIG_MCUBOOT_APP_IMAGE_OFFSET* of bootloader config should be equal to   
 
        *CONFIG_FLASH_ORIGIN* of app_nsh config;
 
-   2. the *CONFIG_MCUBOOT_APP_IMAGE_MAX_SIZE* of bootloader config should be equal with   
+   2. the *CONFIG_MCUBOOT_APP_IMAGE_MAX_SIZE* of bootloader config should be equal to   
 
       *CONFIG_FLASH_LENGTH* of app_nsh config;
 
@@ -56,9 +56,7 @@ $ make distclean; make app_nsh
 
 ## Application Image Signature
 
-1. **Default**: the IMG_START of offset from flash and IMG_LEN of total image length is reading   
-
-   from
+1. **Default**: the IMG_START of offset from flash and IMG_LEN of total image length is read from
    .config (*CONFIG_FLASH_ORIGIN* , *CONFIG_FLASH_LENGTH*)
 
 ```sh
@@ -128,8 +126,8 @@ one with openssl command line tool.
 $ openssl genrsa -out image_sign.pem 2048
 ```
 
-This created a file which contains both the private and public key,
-and will be used when signing images.
+This creates a file which contains both the private and public key,
+and this key pair will be used when signing images.
 
 Then you need to extract the public key from this to include it
 in the bootloader. Bootloader need to keep key parsing minimal,
