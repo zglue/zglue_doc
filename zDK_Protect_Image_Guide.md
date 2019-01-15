@@ -6,7 +6,7 @@
 
 There are three types building type for image .
 
-1) traditional flat build  
+1) Conventional flat build  
 
 By default, when you build zDK image , it will generate a single image .
 
@@ -31,7 +31,7 @@ $ make pass2
 
 ## Memory Protection Unit
 
-The code of kernel image will be executed  in all privileges mode. There privileged threads can access all memory,  
+The code of kernel image will be executed  in all privileges mode. The privileged threads can access all memory,  
 
 all CPU instruction and all MCU peripheral registers. On the other hand, the code in user image will be executed in  
 
@@ -77,7 +77,7 @@ $ nrfjprog --program nuttx_user.hex
 
 There is no MMU , how the kernel know the user application information ?  
 
-The application information is provided by a litthle trick. There is user header on the begining of user image ,  
+To get the application information is a little tricky. There is user header on the begining of user image ,  
 
 then the kernel know the start address of user image and  kernel can get this header information which include  
 
