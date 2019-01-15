@@ -4,13 +4,13 @@
 
 ## Summary
 
-zDK bootloader is based on [mcuboot](http://mcuboot.com/) & [mbedtls](https://tls.mbed.org/) library. Now the feature included:
-1. booting an application from internal flash;
-2. support RSA , ECDSA signature;
-3. image upgrade between Master Image with Second Image;
-4. The Second Image can be located in internal flash or external SPI or QSPI flash.
+zDK bootloader is based on [mcuboot](http://mcuboot.com/) & [mbedtls](https://tls.mbed.org/) library. Now the feature includs:
+1. boot an application from internal flash;
+2. support RSA, ECDSA signature;
+3. Image upgrade between master image with secondary image;
+4. The second image can stay in internal flash or external SPI/QSPI flash.
 
-  When The second image is located in external SPI flash, please make sure the sector  
+  When The second image is located in external SPI flash, please make sure the external flash sector  
 
   size is equal to internal flash erase sector size.
 
