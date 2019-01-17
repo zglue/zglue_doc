@@ -1,8 +1,8 @@
-# zDK Chicago Dev kit quick start guide
+# zDK OmniChip Dev kit quick start guide
 
 ## Hardware requirements
 
-1) Chicago dev kit connected to PC through USB
+1) OmniChip dev kit connected to PC through USB
 2) Segger JTAG connected to 20 pin JTAG header and PC
 3) FTDI breakout board (https://www.sparkfun.com/products/9873)
 
