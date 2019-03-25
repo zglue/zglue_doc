@@ -192,7 +192,7 @@ cond_img_valid(no)->e_fail
 let's suppose your image size is 0x60000, you should set:
 + CONFIG_MCUBOOT_APP_IMAGE_MAX_SIZE in bootloader image to 0x60000
 + CONFIG_FLASH_LENGTH in your app image to 0x60000
-+ CONFIG_MCUBOOT_APP_IMAGE_MAX_SIZE in your app image to 0x60000
++ CONFIG_MCUBOOT_APP_IMAGE_MAX_SIZE in your app image to 0x60000  
 Note:You should also enable mcuboot feature in your app.
 
 
