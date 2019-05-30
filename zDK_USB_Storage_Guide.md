@@ -20,7 +20,7 @@ $ cd nuttx
 $ make distclean
 $ ./tools/configure.sh -l -a ../apps nrf52840_dk/nsh_msc
 # if you are on macOS, you should use "-m" option instead of "-l"
-
+$ make
 # Finally, this will generate nuttx, nuttx.bin,nuttx.hex.
 $ nrfjprog -e; nrfjprog --program nuttx.hex 
 # this will program usb msc image into internal flash
