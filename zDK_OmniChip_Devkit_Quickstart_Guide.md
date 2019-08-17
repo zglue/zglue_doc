@@ -172,7 +172,7 @@ $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nsh
 $make
 ```
-elseif you are running on MacOS
+elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
