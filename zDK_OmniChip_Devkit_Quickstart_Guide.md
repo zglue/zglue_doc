@@ -114,7 +114,7 @@ shows the ble uart profile. The BLE device name is 'Z_nimble_uart'
 Data sent on terminal will be shown in BLE and vice versa.  
 If you are running on Linux
 ```shell
-$cd nuttx/configs/zglue_zeus2_chicago
+$cd nuttx/configs/zglue_zeus2_chicago_MPW_LGA_V2
 $make nimble_uart
 $cd ..
 $cd ..
@@ -123,14 +123,14 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/nimble_uart
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nimble_uart
 $make
 ```
 elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/nimble_uart
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nimble_uart
 $make
 ```
 The example files are in apps/examples/ble_app_uart/  
