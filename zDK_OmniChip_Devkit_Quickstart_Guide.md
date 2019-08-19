@@ -55,14 +55,14 @@ elseif you are running on MacOS
 $cd nuttx
 $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/blinky
-$make
+$make -j 4
 ```
 elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
 $./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/blinky
-$make
+$make -j 4
 ```
 The example files are in apps/examples/blinky_zglue/  
 
@@ -89,14 +89,14 @@ elseif you are running on MacOS
 $cd nuttx
 $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/hello
-$make
+$make -j 4
 ```
 elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
 $./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/hello
-$make
+$make -j 4
 ```
 The example files are in apps/examples/hello/  
 
@@ -124,14 +124,14 @@ elseif you are running on MacOS
 $cd nuttx
 $make distclean
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nimble_uart
-$make
+$make -j 4
 ```
 elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
 $./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nimble_uart
-$make
+$make -j 4
 ```
 The example files are in apps/examples/ble_app_uart/  
 
