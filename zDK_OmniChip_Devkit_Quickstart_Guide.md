@@ -79,7 +79,7 @@ For every example below, you will need to connect the UART_TX_QFN and UART_RX_QF
 Description : This example prints "Hello world" on the UART terminal.  
 If you are running on Linux:
 ```shell
-$cd nuttx/configs/zglue_zeus2_chicago
+$cd nuttx/configs/zglue_zeus2_chicago_MPW_LGA_V2/
 $make hello
 $cd ..
 $cd ..
@@ -88,14 +88,14 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/hello
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/hello
 $make
 ```
 elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/hello
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/hello
 $make
 ```
 The example files are in apps/examples/hello/  
