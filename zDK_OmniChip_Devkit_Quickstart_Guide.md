@@ -161,7 +161,7 @@ launch other applications. Application include
 if you are running on Linux
 ```shell
 $cd nuttx/configs/zglue_zeus2_chicago_MPW_LGA_V2
-$make nsh
+$make nsh_chicago++
 $cd ..
 $cd ..
 ```
@@ -169,14 +169,14 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nsh
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nsh_chicago++
 $make
 ```
 elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nsh
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nsh_chicago++
 $make
 ```
 The example files are in apps/examples/nsh/  
