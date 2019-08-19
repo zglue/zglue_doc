@@ -45,7 +45,7 @@ outputs nuttx.hex and nuttx.bin are located in the /nuttx folder
 Description : This example blinks the LED2 of the zglue smartfabric.  
 If you are running on Linux:
 ```shell
-$cd nuttx/configs/zglue_zeus2_chicago
+$cd nuttx/configs/zglue_zeus2_chicago_MPW_LGA_V2
 $make blinky
 $cd ..
 $cd ..
@@ -54,14 +54,14 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago/blinky
+$./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/blinky
 $make
 ```
 elseif you are running on windows10
 ```shell
 $cd nuttx
 $make distclean
-$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago/blinky
+$./tools/configure.sh -u -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/blinky
 $make
 ```
 The example files are in apps/examples/blinky_zglue/  
