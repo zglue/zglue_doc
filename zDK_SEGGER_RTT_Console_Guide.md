@@ -31,8 +31,8 @@ Comment:
 
 2. make sure the "RTT Enable" option has been enabled from Project Option.
 
-   ![RTT_option](.\imgs\RTT_option.png)
+   ![RTT_option](imgs/RTT_option.png)
 
 3. You can debug the source with console from Segger Embedded Studio as below:
 
-   ![rtt_console](.\imgs\rtt_console.png)
+   ![rtt_console](imgs/rtt_console.png)
