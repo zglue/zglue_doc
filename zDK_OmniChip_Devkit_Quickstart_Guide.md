@@ -54,6 +54,7 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
+$vim configs/zglue_zeus2_chicago_MPW_LGA_V2/blinky/defconfig, use CONFIG_HOST_MACOS=y, comment out CONFIG_HOST_LINUX=y
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/blinky
 $make -j 4
 ```
@@ -88,6 +89,7 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
+$vim configs/zglue_zeus2_chicago_MPW_LGA_V2/hello/defconfig, use CONFIG_HOST_MACOS=y, comment out CONFIG_HOST_LINUX=y
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/hello
 $make -j 4
 ```
@@ -123,6 +125,7 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
+$vim configs/zglue_zeus2_chicago_MPW_LGA_V2/nimble_uart/defconfig, use CONFIG_HOST_MACOS=y, comment out CONFIG_HOST_LINUX=y
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nimble_uart
 $make -j 4
 ```
@@ -169,6 +172,7 @@ elseif you are running on MacOS
 ```shell
 $cd nuttx
 $make distclean
+$vim configs/zglue_zeus2_chicago_MPW_LGA_V2/nsh_chicago++/defconfig, use CONFIG_HOST_MACOS=y, comment out CONFIG_HOST_LINUX=y
 $./tools/configure.sh -m -a ../apps zglue_zeus2_chicago_MPW_LGA_V2/nsh_chicago++
 $make
 ```
